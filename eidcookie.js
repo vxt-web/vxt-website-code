@@ -30,7 +30,7 @@ function sendTrackingEvent(type, data, eid) {
 // Get EID from URL or cookie, set cookie if new
 const params = new URLSearchParams(window.location.search);
 const eid = params.get('eid') || getCookie('eidCookie') || 'unknown';
-if (params.get('eid') && !getCookie('eidCookie')) setCookie('eidCookie', params.get('eid'), 30);
+if (params.get('eid') && !getCookie('eidCookie')) setCookie('eidCookie', params.get('eid'), 14);
 
 // Track page view
 sendTrackingEvent('pageView', { page: window.location.href, eid }, eid);
